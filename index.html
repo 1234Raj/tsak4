@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer</title>
+</head>
+<body>
+    <div id="Timer">
+         <div class="contain">
+          <div class="img">
+          <img src="/LOGOSMALL.png" alt="" class="img-fluid">
+        </div>
+          <h1>AppsDeployer</h1>
+           <p>Welcome In AppsDeployer For New Journey</p>
+         </div>
+
+    </div>
+    <div class="text">
+      <h1 >COUNTDOWN BEGINS</h1>
+      <P id="demo"></P>
+    </div>
+    <div>
+      <button class="touch"><a href="https://www.appsdeployer.com/">Get Your Journey</a></button>
+    </div>
+<script>
+var des = new Date(" nov 4,2022 12:50:00").getTime();
+var x = setInterval(function(){
+
+var now = new Date().getTime();
+
+var diff = des-now;
+
+ var days = Math.floor (diff/(1000*60*60*24));
+ 
+ 
+ var hours = Math.floor ((diff%(1000*60*60*24))/(1000*60*60));
+  
+ var minuts = Math.floor ((diff%(1000*60*60))/(1000*60));
+ 
+ var seconds = Math.floor ((diff%(1000*60))/(1000));
+  
+ document.getElementById("demo").innerHTML = days +" "  +"Days"+" :"+" " + hours +" "+ "Hrs "+" :"+" " + minuts+" " + "m"+" :"+" " + seconds+" " +"s";
+},1000)
+</script>
+</body>
+</html>
